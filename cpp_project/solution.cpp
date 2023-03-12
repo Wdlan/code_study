@@ -1668,3 +1668,26 @@ vector<int> BitOperation::singleNumber2(vector<int> &nums) {
     }
     return {x, bitMask ^ x};
 }
+
+bool DailyCoding::possibleBipartition(int n, vector<vector<int>>& dislikes) {
+
+}
+
+int DailyCoding::totalFruit(vector<int>& fruits) {
+    unordered_map<int, int> cnt;
+
+    int l = 0, res = 0;
+    for (int i = 0; i < fruits.size(); ++i) {
+        ++cnt[fruits[i]];
+        while (cnt.size() > 2) {
+            auto it = cnt.find(fruits[l]);
+            --it->second;
+            if (it->second == 0) {
+                cnt.erase(it);
+            }
+            ++l;
+        }
+        res = max(res, i - l + 1);
+    }
+    return res;
+}

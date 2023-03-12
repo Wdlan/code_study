@@ -137,4 +137,9 @@ public:
     static vector<int> singleNumber2(vector<int>& nums);	// 260. 只出现一次的数字 III
 };
 
+class DailyCoding {
+    static bool possibleBipartition(int n, vector<vector<int>>& dislikes);  // 886. 可能的二分法
+    static int totalFruit(vector<int>& fruits);    // 904. 水果成篮
+};
+
 #endif //THEROADTOADVANCEMENT_IMPORTANT200_H
